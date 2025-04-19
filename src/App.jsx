@@ -1,13 +1,6 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Preview from './components/Preview';
-import Menu from './components/Menu';
-import Footer from './components/Footer';
-
 import Mainlayout from './layout/Mainlayout';
 import HomePage from './pages/HomePage';
 import MenuPage from './pages/MenuPage';
-
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 
 function App() {
@@ -18,7 +11,6 @@ function App() {
         <Route index element={<HomePage/>}/>
 
         <Route path='/menu' element={<MenuPage/>}/>
-
 
       </Route>
 
