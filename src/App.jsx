@@ -1,6 +1,8 @@
 import Mainlayout from './layout/Mainlayout';
 import HomePage from './pages/HomePage';
 import MenuPage from './pages/MenuPage';
+import AboutUsPage from './pages/AboutUsPage';
+import NotFoundPage from './pages/NotFoundPage';
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 
 function App() {
@@ -11,6 +13,10 @@ function App() {
         <Route index element={<HomePage/>}/>
 
         <Route path='/menu' element={<MenuPage/>}/>
+
+        <Route path='/about-us' element={<AboutUsPage/>}/>
+
+        <Route path='*' element={<NotFoundPage/>}/>
 
       </Route>
 

@@ -171,7 +171,7 @@ const Menu = () => {
           Fresh fish, garlic, onions, thyme, chili, lemon, olive oil
           </p>
           <p className="font-bold text-center mt-3 text-xl text-green-600">
-          ₦2,499.99
+          ₦7,999.99
           </p>
           </figcaption>
         </figure>

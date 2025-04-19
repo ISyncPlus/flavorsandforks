@@ -9,6 +9,9 @@ const Footer = () => {
           <h1 className='text-lg sm:text-2xl mb-2 text-center'>
             Flavors &amp; Forks
           </h1>
+          <p className='text-[0.7rem] text-center'>
+            &copy;2021 - 2025 Flavors &amp; Forks|All Rights Reserved
+          </p>
         </div>
 
         <div className='hidden md:block flex-1'>
