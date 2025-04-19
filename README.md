@@ -49,7 +49,7 @@ To run **Flavors & Forks** locally, follow these steps:
 
 ## 🖼️ Preview
 
-![Flavors & Forks Screenshot]()
+![Flavors & Forks Screenshot](/assets/img/image.png)
 
 ---
 
