@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FaCaretDown } from 'react-icons/fa'
 const Navbar = () => {
   return (
     <div className="sticky top-0 z-10">
@@ -20,13 +21,32 @@ const Navbar = () => {
                 
                 {/* Nav */}
                 <nav className="hidden md:flex justify-evenly items-center max-w-2xl p-7 flex-2 text-xl" aria-label='main'>
-                  <Link to="/">Home</Link>
+                  <Link to="/" className='hover:opacity-80 transition-opacity duration-300'>Home</Link>
         
-                  <Link to="/menu">Menu</Link>
+                  <Link to="/menu" className='hover:opacity-80 transition-opacity duration-300'>Menu</Link>
         
-                  <Link to="/about-us">About Us</Link>
+                  <Link to="/about-us" className='hover:opacity-80 transition-opacity duration-300'>About Us</Link>
         
-                  <Link to="/reservations">Reservations</Link>
+                  <Link to="/reservations" className='hover:opacity-80 transition-opacity duration-300'>Reservations</Link>
+
+                <div>
+                <Link to="#" className='hover:opacity-80 transition-opacity duration-300'>Affiliates <FaCaretDown className='inline -mt-1'/> </Link>
+                  <ul className='hidden'>
+                    <li>
+                    <Link to="/customers" className='hover:opacity-80 transition-opacity duration-300'>Customers</Link>
+                    </li>
+
+                    <li>
+                    <Link to="/companies" className='hover:opacity-80 transition-opacity duration-300'>Companies</Link>
+                    </li>
+
+                    <li>
+                    <Link to="/active-users" className='hover:opacity-80 transition-opacity duration-300'>Active Users</Link>
+                    </li>
+                  </ul>
+
+                </div>
+                  
                 </nav>
               </section>
             </header>

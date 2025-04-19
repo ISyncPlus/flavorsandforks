@@ -6,7 +6,7 @@ import ScrollToTop from '../components/ScrollToTop'
 
 const Mainlayout = () => {
   return (
-    <div>
+    <div className='scroll-smooth'>
         <ScrollToTop/>
         <Navbar/>
         <Outlet/>

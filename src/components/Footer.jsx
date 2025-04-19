@@ -6,11 +6,13 @@ const Footer = () => {
         <footer className='bg-gray-900 px-1 py-5 text-white'>
       <section className='flex justify-evenly items-center max-w-full mx-auto'>
         <div className='flex-2'>
-          <h1 className='text-lg sm:text-2xl mb-2 text-center'>
+          <h1 className='text-lg sm:text-2xl mb-2 text-center font-bold'>
             Flavors &amp; Forks
           </h1>
           <p className='text-[0.7rem] text-center'>
-            &copy;2021 - 2025 Flavors &amp; Forks|All Rights Reserved
+            <i>
+            &copy;2021 - 2025 Flavors &amp; Forks | All Rights Reserved
+              </i>
           </p>
         </div>
 
@@ -45,11 +47,11 @@ const Footer = () => {
         </div>
 
         <div className="text-[0.8rem] sm:text-1 flex-1">
-          <h3 className="text-lg sm:text-xl">
+          <h3 className="text-lg sm:text-xl -mt-1 font-bold">
             Contact Us
           </h3>
           <div>
-          <p>126 Flyer Street, Detroit Smash, MHA</p>
+          <p>F&amp;F Head Branch, 126 Flyer Street, Detroit Smash, MHA</p>
           <p>📞 (123) 456-7890</p>
           <p>info@flavorsandforks.com</p>
           </div>
