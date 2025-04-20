@@ -3,7 +3,7 @@ import { FaFireFlameSimple } from 'react-icons/fa6';
 const Menu = () => {
   return (
     <div>
-      <section className="max-w-full mx-auto text-black bg-gray-100 min-h-dvh pt-5">
+      <section className="max-w-full mx-auto text-black bg-gray-100 min-h-dvh pt-8 pb-10">
       <h2 className="text-center text-3xl sm:text-4xl mb-5">Our Menu</h2>
       <article className="grid grid-cols-2 lg:grid-cols-3 gap-5 p-4 max-w-full pb-5">
         {/* item 1 */}

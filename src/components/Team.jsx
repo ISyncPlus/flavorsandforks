@@ -9,11 +9,11 @@ const Team = () => {
 
         <section className="flex flex-col">
 
-            <div className="flex flex-col sm:flex-row items-center justify-evenly gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-5">
             <img src="/team.jpg" alt="Lagos Team" className="w-70 h-70 object-cover rounded-full border-2  border-orange-400 shadow-xl"/>
             <img src="/team-2.jpg" alt="Accra Team" className="w-70 h-70 object-cover rounded-full border-2  border-orange-400 shadow-xl"/>
 
-            <div className="w-70 h-70 rounded-full border-2  border-orange-400">
+            <div className="w-70 h-70 rounded-full border-2  border-orange-400 sm:col-span-2 lg:col-span-1">
             <img src="/team-3.jpg" alt="Nairobi Team" className="w-69 h-69 object-cover rounded-full shadow-xl"/>
             </div> 
         </div>
@@ -25,6 +25,7 @@ const Team = () => {
             </p>
 
         </section>
+        <hr className='w-30 mx-auto mb-15 mt-7'/>
     </div>
   )
 }

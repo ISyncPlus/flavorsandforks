@@ -3,7 +3,7 @@ import React from 'react'
 const Preview = () => {
   return (
     <div className="max-w-full mx-auto font-playwrite bg-gray-100 text-white">
-      <section className='bg-gray-100 text-black'>
+      <section className='bg-gray-100 text-black pb-10'>
         
               <h3 className="text-3xl text-center pt-10 mb-5 font-serif">
                 What's in Store?🍽️
@@ -20,7 +20,7 @@ const Preview = () => {
                   At Flavors & Forks, we've created a cozy and elegant atmosphere, perfect for any occasion. With beautiful tables and soft lighting, every detail is designed to make you feel right at home. Enjoy a meal in a space that's as delightful as the food itself.
                   </p>
                 </section>
-              <img src="/inStore-1.jpg" alt="Ambient Environment" className='w-85 h-85 rounded-full object-cover ml-10'/>
+              <img src="/inStore-1.jpg" alt="Ambient Environment" className='w-85 h-85 rounded-full object-cover ml-10 shadow-lg'/>
               </figure>
       
               {/* Second Des */}
@@ -33,7 +33,7 @@ const Preview = () => {
                   Our chefs bring passion to every dish, using fresh ingredients and expert techniques. Watch as they craft each meal with precision, from the perfect sauce to the final touch. It's not just cooking, it's an art.
                   </p>
                 </section>
-              <img src="/inStore-2.jpg" alt="Top Class Chef" className='w-85 h-85 rounded-full object-cover sm:mr-10'/>
+              <img src="/inStore-2.jpg" alt="Top Class Chef" className='w-85 h-85 rounded-full object-cover sm:mr-10 shadow-lg'/>
               </figure>
       
             {/* Third Des */}
@@ -46,7 +46,7 @@ const Preview = () => {
                   At Flavors & Forks, we believe every meal should be an experience. From the first bite to the last, we serve dishes made with the freshest ingredients and a whole lot of love.
                   </p>
                 </section>
-              <img src="/inStore-3.png" alt="Amazing food" className='w-90 h-90 rounded-full object-cover sm:ml-10'/>
+              <img src="/inStore-3.png" alt="Amazing food" className='w-90 h-90 rounded-full object-cover sm:ml-10 shadow-lg'/>
       
       
               </figure>
