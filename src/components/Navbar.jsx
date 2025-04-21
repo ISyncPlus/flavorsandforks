@@ -4,15 +4,15 @@ import { FaCaretDown } from 'react-icons/fa'
 const Navbar = () => {
   return (
     <div className="sticky top-0 z-10">
-        <header className="max-w-full bg-orange-400 rounded-b-xl overflow-hidden text-white">
+        <header className="max-w-full bg-orange-400 overflow-hidden text-white">
               <section className="flex justify-between items-center mx-auto">
-                  <a href="/" className='flex mx-5 md:mx-10 items-center'>
+                  <Link to="/" className='flex mx-5 md:mx-10 items-center'>
                     <img src="/logo.png" alt="Flavor and Forks" className="w-20" />
                   <h1 className="text-2xl mx-1"> 
                     Flavors &amp; Forks
         
                   </h1>
-                  </a>
+                  </Link>
         
                 {/* Hamburger */}
                 <nav className="md:hidden w-8 h-8 text-4xl cursor-pointer mr-3 -mt-3">
@@ -24,28 +24,40 @@ const Navbar = () => {
                   <Link to="/" className='hover:opacity-80 transition-opacity duration-300'>Home</Link>
         
                   <Link to="/menu" className='hover:opacity-80 transition-opacity duration-300'>Menu</Link>
+
+                  <Link to="/reservations" className='hover:opacity-80 transition-opacity duration-300'>Reservations</Link>
         
                   <Link to="/about-us" className='hover:opacity-80 transition-opacity duration-300'>About Us</Link>
-        
-                  <Link to="/reservations" className='hover:opacity-80 transition-opacity duration-300'>Reservations</Link>
 
-                <div>
-                <Link to="#" className='hover:opacity-80 transition-opacity duration-300'>Affiliates <FaCaretDown className='inline -mt-1'/> </Link>
-                  <ul className='hidden'>
-                    <li>
-                    <Link to="/customers" className='hover:opacity-80 transition-opacity duration-300'>Customers</Link>
+                
+                <button className='group'>
+                  <h3 className='text-center cursor-pointer relative'>
+                  Affiliates <FaCaretDown className='inline -mt-1'/> 
+                </h3>
+
+                <ul className='absolute top-[60%] right-[4%] border rounded-lg border-transparent p-2 bg-orange-400 pt-10
+                scale-y-0 group-hover:scale-y-100
+                duration-200
+                origin-top
+                '>
+                    <li className='mb-3'>
+                    <Link to="/affiliates/customers" className='hover:opacity-80 transition-opacity duration-300'>Customers</Link>
                     </li>
 
-                    <li>
-                    <Link to="/companies" className='hover:opacity-80 transition-opacity duration-300'>Companies</Link>
+                    <li className='mb-3'>
+                    <Link to="/affiliates/companies" className='hover:opacity-80 transition-opacity duration-300'>Companies</Link>
                     </li>
 
-                    <li>
-                    <Link to="/active-users" className='hover:opacity-80 transition-opacity duration-300'>Active Users</Link>
+                    <li className='mb-3'>
+                    <Link to="/affiliates/active-users" className='hover:opacity-80 transition-opacity duration-300'>Active Users</Link>
                     </li>
                   </ul>
+                
+                
+                </button>
+                  
 
-                </div>
+    
                   
                 </nav>
               </section>

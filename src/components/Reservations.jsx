@@ -38,13 +38,13 @@ const Reservations = () => {
                     {/* Date */}
                     <div className='mt-3'>
                     <label htmlFor="phone" className='text-lg sm:text-xl font-bold text-slate-700'>Date of Reservation</label>
-                    <input type="date" name="date" id="date" required className='block text-xl sm:text-2xl border rounded-lg p-2 mt-2 shadow-sm' />
+                    <input type="date" name="date" id="date" required className='block text-[0.5em] sm:text-xl border rounded-lg p-2 mt-2 shadow-sm' />
                     </div>
 
                     {/* Time */}
                     <div className='mt-3'>
                     <label htmlFor="time" className='text-lg sm:text-xl font-bold text-slate-700'>Time of Reservation</label>
-                    <input type="time" name="time" value={time} id="timeInput" onChange={changeTime}  required className='block text-xl sm:text-2xl border rounded-lg p-2 mt-2 shadow-sm' />
+                    <input type="time" name="time" value={time} id="timeInput" onChange={changeTime}  required className='block text-[0.5em] sm:text-xl border rounded-lg p-2 mt-2 shadow-sm' />
                     </div>
 
                     {/* Number of Persons */}
