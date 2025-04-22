@@ -40,7 +40,7 @@ const Footer = () => {
           <h3 className='sm:text-xl text-[0.8em] font-bold'>
             Opening Hours
           </h3>
-          <div className='text-[0.8rem] sm:text-1'>
+          <div className='text-[0.8em] sm:text-1'>
           <p>Mon - Fri: <span className='block'>10:00 AM - 10:00 PM</span></p>
           <p>Sat - Sun:
              <span className='block'>
@@ -54,8 +54,8 @@ const Footer = () => {
           <h3 className="text-sm sm:text-xl -mt-1 font-bold">
             Contact Us
           </h3>
-          <div>
-          <p>F&amp;F Head Branch, 126 Flyer Street, Detroit Smash, MHA</p>
+          <div className='text-[0.8em]'>
+          <p >F&amp;F Head Branch, 126 Flyer Street, Detroit Smash, MHA</p>
           <p>📞 (123) 456-7890</p>
           <p>info@flavorsandforks.com</p>
           </div>
