@@ -7,7 +7,7 @@ const Hero = () => {
         <div className='flex flex-col justify-center py-20 text-center items-center'>
 
         <img src="/logo.png" alt="Flavor and Forks" className="w-1/4 md:w-1/5" />
-        <h2 className="text-6xl md:text-8xl mb-10 -mt-2 font-play-cu">
+        <h2 className="text-6xl md:text-8xl mb-2 sm:mb-10 -mt-2 font-play-cu leading-normal">
           Flavors &amp; Forks
         </h2>
         <h3 className='text-2xl font-sans'>The Taste You've Been Waiting For</h3>
