@@ -1,18 +1,24 @@
 import React from 'react'
 import { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 const Reservations = () => {
     const [time, setTime] = useState('00:00');
     const changeTime = (e) =>{
         setTime(e.target.value)
 
     }
+
+    const navigate = useNavigate();
+    const formSubmit = (e)=> {
+        e.preventDefault();
+        navigate('/')
+    }
   return (
     <div className="p-7">
         <section className="max-w-3xl mx-auto bg-slate my-auto">
             <div className="border-1 rounded-lg shadow-xl mt-4 p-6 text-4xl">
                 
-                <form action="#" method="post">
+                <form>
                     <h2 className='text-center text-slate-700 font-cinzel font-bold'>Reserve</h2>
 
                     {/* Name */}
@@ -78,7 +84,7 @@ const Reservations = () => {
                     </div>
                     
                     <div>
-                    <button type="submit" onSubmit={''} className='text-lg w-full mx-auto border px-3 py-2 rounded-lg shadow-lg bg-amber-500 text-white border-transparent mt-3 cursor-pointer hover:bg-amber-600 '>Submit</button>
+                    <button type="submit" onSubmit={formSubmit} className='text-lg w-full mx-auto border px-3 py-2 rounded-lg shadow-lg bg-amber-500 text-white border-transparent mt-3 cursor-pointer hover:bg-amber-600 '>Submit</button>
                     </div>
                 </form>
 

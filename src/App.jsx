@@ -6,7 +6,9 @@ import NotFoundPage from './pages/NotFoundPage';
 import ReservationsPage from './pages/ReservationsPage';
 import CustomersPage from './pages/CustomersPage';
 import CompaniesPage from './pages/CompaniesPage';
-import ActiveUsersPage from './pages/ActiveUsersPage';
+import UsersPage from './pages/UsersPage';
+import UserPage from './pages/UserPage';
+import CompanyDetailsPage from './pages/CompanyDetailsPage';
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 
 function App() {
@@ -28,7 +30,11 @@ function App() {
 
         <Route path='/affiliates/companies' element={<CompaniesPage url={API_URL} />}/>
 
-        <Route path='/affiliates/active-users' element={<ActiveUsersPage url={API_URL} />}/>
+        <Route path='/affiliates/companies/:id' element={<CompanyDetailsPage/>}/>
+
+        <Route path='/affiliates/active-users' element={<UsersPage url={API_URL} />}/>
+
+        <Route path='/affiliates/users/:id' element={<UserPage />}/>
 
         <Route path='*' element={<NotFoundPage/>}/>
 

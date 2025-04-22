@@ -2,8 +2,9 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import Spinner from '../components/Spinner'
 import DataTable from 'react-data-table-component'
+import { useNavigate } from 'react-router-dom'
 
-const ActiveUsersPage = ( {url} ) => {
+const UsersPage = ( {url} ) => {
   const [loading, setLoading] = useState(true);
   const [users, setUsers] = useState([]);
 
@@ -36,11 +37,16 @@ const ActiveUsersPage = ( {url} ) => {
       selector: (row) => row.email,
     },
     {
-      name: "Photo",
-      selector: (row) => row.photo,
+      name: "ZIP Code",
+      selector: (row) => row.zip,
     },
     
   ]
+  
+  const navigate = useNavigate();
+  const handleClick = (row)=> {
+    navigate(`/affiliates/users/${row.id}`, {state: {users: row} } )
+  }
 
   return (
     <div>
@@ -51,7 +57,18 @@ const ActiveUsersPage = ( {url} ) => {
         data={users}
         progressPending={loading}
         progressComponent={<Spinner />}
+        onRowClicked={handleClick}
         pagination
+        customStyles={
+          {
+            rows: {
+              style: {
+                cursor: "pointer",
+                fontWeight: "bold",
+              }
+            }
+          }
+        }
         
         />
       </section>
@@ -60,4 +77,4 @@ const ActiveUsersPage = ( {url} ) => {
   )
 }
 
-export default ActiveUsersPage
+export default UsersPage

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Spinner from '../components/Spinner'
 import DataTable from 'react-data-table-component'
 const CompaniesPage = ({ url }) => {
@@ -42,6 +43,12 @@ const CompaniesPage = ({ url }) => {
       selector: (row) => row.employeeCount,
     },
   ]
+
+  const navigate = useNavigate();
+  const rowClick = (row)=> { 
+    navigate(`/affiliates/companies/${row.id}`, {state: { company: row } })
+
+  }
   return (
     <div>
       <section className='text-center p-8'>
@@ -49,9 +56,20 @@ const CompaniesPage = ({ url }) => {
         title="Companies"
         columns={columns}
         data={companies}
+        onRowClicked={rowClick}
         progressPending={loading}
         progressComponent={<Spinner/>}
         pagination
+        customStyles={
+          {
+            rows: {
+              style: {
+                cursor: "pointer",
+                fontWeight: "bold"
+              },
+            },
+          }}
+
         />
 
       </section>
