@@ -6,10 +6,12 @@ import ScrollToTop from '../components/ScrollToTop'
 
 const Mainlayout = () => {
   return (
-    <div className='scroll-smooth'>
+    <div className='scroll-smooth flex flex-col min-h-screen'>
         <ScrollToTop/>
         <Navbar/>
+        <main className='flex-1'>
         <Outlet/>
+        </main>
         <Footer/>
       
     </div>

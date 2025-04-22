@@ -10,6 +10,8 @@ import ActiveUsersPage from './pages/ActiveUsersPage';
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 
 function App() {
+  const API_URL= 'https://fake-json-api.mock.beeceptor.com';
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<Mainlayout/>}>
@@ -22,11 +24,11 @@ function App() {
 
         <Route path='/reservations' element={<ReservationsPage/>}/>
 
-        <Route path='/affiliates/customers' element={<CustomersPage/>}/>
+        <Route path='/affiliates/customers' element={<CustomersPage url={API_URL} />}/>
 
-        <Route path='/affiliates/companies' element={<CompaniesPage/>}/>
+        <Route path='/affiliates/companies' element={<CompaniesPage url={API_URL} />}/>
 
-        <Route path='/affiliates/active-users' element={<ActiveUsersPage/>}/>
+        <Route path='/affiliates/active-users' element={<ActiveUsersPage url={API_URL} />}/>
 
         <Route path='*' element={<NotFoundPage/>}/>
 

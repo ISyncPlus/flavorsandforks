@@ -35,10 +35,10 @@ const Navbar = () => {
                   Affiliates <FaCaretDown className='inline -mt-1'/> 
                 </h3>
 
-                <ul className='absolute top-[60%] right-[4%] border rounded-lg border-transparent p-2 bg-orange-400 pt-10
+                <ul className='absolute top-[60%] right-[4%] border rounded-lg border-transparent px-4 bg-orange-400 pt-10
                 scale-y-0 group-hover:scale-y-100
                 duration-200
-                origin-top
+                origin-top text-lg
                 '>
                     <li className='mb-3'>
                     <Link to="/affiliates/customers" className='hover:opacity-80 transition-opacity duration-300'>Customers</Link>
