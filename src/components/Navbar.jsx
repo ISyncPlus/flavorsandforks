@@ -14,11 +14,11 @@ const Navbar = () => {
   }
   return (
     <div className="sticky top-0 z-10">
-        <header className="max-w-full bg-orange-400 overflow-hidden text-white">
-              <section className="flex justify-between items-center mx-auto">
-                  <Link to="/" className='flex mx-5 lg:mx-10 items-center lg:flex-1'>
-                    <img src="/logo.png" alt="Flavor and Forks" className="w-20" />
-                  <h1 className="text-2xl mx-1"> 
+        <header className="max-w-full bg-orange-400 overflow-hidden text-white h-[5em] sm:h-full">
+              <section className="flex justify-between items-center mx-auto pt-1">
+                  <Link to="/" className='flex mx-5 lg:mx-10 items-center lg:flex-1 my-2'>
+                    <img src="/logo.png" alt="Flavor and Forks" className="w-15 sm:w-20" />
+                  <h1 className="text-xl sm:text-2xl mx-1"> 
                     Flavors &amp; Forks
         
                   </h1>
@@ -26,15 +26,11 @@ const Navbar = () => {
         
                 {/* Hamburger Menu */}
                 
-                  <button className=' sm:hidden cursor-pointer relative w-8 h-8' onClick={toggleHam}>
-                    <div className="bg-white h-1 w-8 absolute transform -translate-x-5
+                  <button className=' sm:hidden cursor-pointer relative w-8 h-8 mr-3 text-2xl' onClick={toggleHam}>
+                    &#9776;
                     
-                    
-                    
-                    ">
-                    </div>
                   </button> 
-                <nav className={`transition-all duration-200 origin-top flex flex-col sm:hidden justify-center ${affiliateOpen ? 'h-[60vh]' : ''} items-center max-w-2xl px-7 pt-1 mt-3 pb-10 text-xl absolute right-0 top-15 rounded-2xl bg-orange-400 h-[20em]`} aria-label='main'>
+                <nav className={`transition-all duration-200 origin-top ${!ham ? 'scale-y-0' : 'scale-y-100'} flex flex-col sm:hidden justify-center ${affiliateOpen ? 'h-[35vh]' : ''} items-center max-w-2xl px-7 pt-1 mt-3 pb-7 text-sm absolute right-0 top-10 rounded-b-lg bg-orange-400 h-[19em]`} aria-label='main'>
                   <Link to="/" className='hover:opacity-80 transition-opacity duration-300 flex-1 pt-5'>Home</Link>
         
                   <Link to="/menu" className='hover:opacity-80 transition-opacity duration-300 flex-1 pt-5'>Menu</Link>
@@ -43,7 +39,7 @@ const Navbar = () => {
         
                   <Link to="/about-us" className='hover:opacity-80 transition-opacity duration-300 flex-1 pt-5'>About Us</Link>
 
-                  <button onClick={toggleAffiliate} className='flex-1'>
+                  <button onClick={toggleAffiliate} className='flex-1 pt-5'>
                 <h3 className='text-center cursor-pointer relative'>
                   Affiliates <FaCaretDown className='inline -mt-1'/> </h3>
                 </button>
@@ -52,7 +48,7 @@ const Navbar = () => {
 
                 {/* Dropdown menu */}
                 <ul className={`transition-all ease-in-out duration-200 ${affiliateOpen ? 'scale-y-100 origin-top block': 'scale-y-0 scale-x-0 hidden'} border rounded-lg border-transparent bg-orange-400 pt-3
-                text-lg text-center `}>
+                text-sm text-center `}>
                     <li className='mb-3'>
                     <Link to="/affiliates/customers" className='hover:opacity-80 transition-opacity duration-300'>Customers</Link>
                     </li>
